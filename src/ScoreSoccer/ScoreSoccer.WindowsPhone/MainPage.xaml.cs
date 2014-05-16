@@ -46,9 +46,6 @@ namespace ScoreSoccer
             // this event is handled for you.
         }
 
-        private void Teams_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Teams));              
-        }
+      
     }
 }

@@ -36,9 +36,6 @@ namespace ScoreSoccer
         {
         }
 
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+      
     }
 }

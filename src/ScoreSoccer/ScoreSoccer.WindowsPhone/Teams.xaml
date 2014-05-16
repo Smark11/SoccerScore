@@ -42,16 +42,29 @@
                 Height="100"
                 Margin="0,0,0,0"
                 Foreground="Black"   />
-               
+
         <ListBox
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="3"
+            ItemsSource="{Binding TeamsList}"
             Margin="20,0,0,0"
             Height="300"
             Width="350"
             BorderBrush="Gray"
-            BorderThickness="10,10,10,10" />
+            BorderThickness="10,10,10,10" >
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" Margin="0,2,0,0" BorderThickness="0,0,0,2">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock TextAlignment="Center" Margin="10,0,0,0" Width="200" Text="{Binding TeamName}"  />
+                            <TextBlock  TextAlignment="Center" Margin="10,0,0,0" Width="200" Text="{Binding Coach}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <Button Content="Add Team"
                 Command="{Binding AddTeamButton}"         

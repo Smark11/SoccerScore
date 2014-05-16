@@ -9,7 +9,7 @@ namespace ScoreSoccer.Classes
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
-
+     
         #region "Properties"
 
         private void NotifyPropertyChanged(String propertyName)

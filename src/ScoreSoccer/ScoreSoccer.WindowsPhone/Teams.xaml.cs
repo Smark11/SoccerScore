@@ -36,14 +36,6 @@ namespace ScoreSoccer
         {
         }
 
-        private void AddTeam_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(TeamInfo));
-        }
-
-        private void EditTeam_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
     }
 }

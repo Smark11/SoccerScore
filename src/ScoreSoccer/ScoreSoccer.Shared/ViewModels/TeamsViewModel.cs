@@ -1,13 +1,40 @@
-﻿using ScoreSoccer.Commands;
+﻿using ScoreSoccer.Classes;
+using ScoreSoccer.Commands;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
 
 namespace ScoreSoccer.ViewModels
 {
-    public class TeamsViewModel
+    public class TeamsViewModel : INotifyPropertyChanged
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public TeamsViewModel()
+        {
+            AddTeamButton = new AddTeamButtonClick();
+            EditTeamButton = new EditTeamButtonClick();
+
+            _teamsList = new ObservableCollection<Team>();
+
+            //Test code will be replaced by a getteams proc
+            //START TEST CODE
+            Team _team1 = new Team();        
+            _team1.TeamName = "Farm";
+            _team1.Coach = "Chris";
+            _teamsList.Add(_team1);
+
+            Team _team2 = new Team();
+            _team2.TeamName = "Farm";
+            _team2.Coach = "Chris";
+            _teamsList.Add(_team2);
+            //END TEST CODE
+
+        }
 
         public ICommand AddTeamButton
         {
@@ -26,10 +53,26 @@ namespace ScoreSoccer.ViewModels
             get;
             private set;
         }
-        public TeamsViewModel()
+
+        #region "Properties"
+
+        private void NotifyPropertyChanged(String propertyName)
         {
-            AddTeamButton = new AddTeamButtonClick();
-            EditTeamButton = new EditTeamButtonClick();
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
+
+        private ObservableCollection<Team> _teamsList;
+        public ObservableCollection<Team> TeamsList
+        {
+            get { return _teamsList; }
+            set { TeamsList = value; NotifyPropertyChanged("TeamsList"); }
+        }
+
+        #endregion "Properties"
+
+
     }
 }
