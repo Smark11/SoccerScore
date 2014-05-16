@@ -19,19 +19,21 @@ namespace ScoreSoccer.ViewModels
             AddTeamButton = new AddTeamButtonClick();
             EditTeamButton = new EditTeamButtonClick();
 
-            _teamsList = new ObservableCollection<Team>();
+            TeamsList = new ObservableCollection<Team>();
 
-            //Test code will be replaced by a getteams proc
+            //Test code will be replaced by a GETTEAMS proc
+            //Just trying to get some teams to show up in listbox so we can
+            //edit and add teams
             //START TEST CODE
             Team _team1 = new Team();        
-            _team1.TeamName = "Farm";
+            _team1.TeamName = "Farmington";
             _team1.Coach = "Chris";
-            _teamsList.Add(_team1);
+            TeamsList.Add(_team1);
 
             Team _team2 = new Team();
-            _team2.TeamName = "Farm";
-            _team2.Coach = "Chris";
-            _teamsList.Add(_team2);
+            _team2.TeamName = "Avon";
+            _team2.Coach = "Steve";
+            TeamsList.Add(_team2);
             //END TEST CODE
 
         }
