@@ -23,6 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\EditTeamButtonClick.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\SaveTeamButtonClick.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\TeamsButtonClick.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\SoccerDataContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TeamInfoViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TeamsViewModel.cs" />
