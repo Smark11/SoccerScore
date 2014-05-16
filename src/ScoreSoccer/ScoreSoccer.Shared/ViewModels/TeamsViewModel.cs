@@ -19,6 +19,8 @@ namespace ScoreSoccer.ViewModels
             AddTeamButton = new AddTeamButtonClick();
             EditTeamButton = new EditTeamButtonClick();
 
+            
+
             TeamsList = new ObservableCollection<Team>();
 
             //Test code will be replaced by a GETTEAMS proc

@@ -83,14 +83,14 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TeamInfo.xaml.cs">
+    <Compile Include="Views\TeamInfo.xaml.cs">
       <DependentUpon>TeamInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Teams.xaml.cs">
+    <Compile Include="Views\Teams.xaml.cs">
       <DependentUpon>Teams.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -108,15 +108,15 @@
     <Content Include="Assets\WideLogo.scale-240.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TeamInfo.xaml">
+    <Page Include="Views\TeamInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Teams.xaml">
+    <Page Include="Views\Teams.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

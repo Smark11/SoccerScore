@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ScoreSoccer.Classes
 {
-    public class Stat : INotifyPropertyChanged
+    public class Game : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -48,40 +48,41 @@ namespace ScoreSoccer.Classes
             set { GameTime = value; NotifyPropertyChanged("GameTime"); }
         }
 
-        private string _playerLastName;
-        public string PlayerLastName
+        private int _playersPerTeam;
+        public int PlayersPerTeam
         {
-            get { return _playerLastName; }
-            set { PlayerLastName = value; NotifyPropertyChanged("PlayerLastName"); }
+            get { return _playersPerTeam; }
+            set { PlayersPerTeam = value; NotifyPropertyChanged("PlayersPerTeam"); }
         }
 
-        private string _playerFirstName;
-        public string PlayerFirstName
+        private int _periods;
+        public int Periods
         {
-            get { return _playerFirstName; }
-            set { PlayerFirstName = value; NotifyPropertyChanged("PlayerFirstName"); }
+            get { return _periods; }
+            set { Periods = value; NotifyPropertyChanged("Periods"); }
         }
 
-        private string _uniformNumber;
-        public string UniformNumber
+        private int _periodLength;
+        public int PeriodLength
         {
-            get { return _uniformNumber; }
-            set { UniformNumber = value; NotifyPropertyChanged("UniformNumber"); }
+            get { return _periodLength; }
+            set { PeriodLength = value; NotifyPropertyChanged("PeriodLength"); }
         }
 
-        private string _statName;
-        public string StatName
+        private string _hasOverTime;
+        public string HasOverTime
         {
-            get { return _statName; }
-            set { StatName = value; NotifyPropertyChanged("StatName"); }
+            get { return _hasOverTime; }
+            set { HasOverTime = value; NotifyPropertyChanged("HasOverTime"); }
         }
 
-        private int _statValue;
-        public int StatValue
+        private int _overTimeLength;
+        public int OverTimeLength
         {
-            get { return _statValue; }
-            set { StatValue = value; NotifyPropertyChanged("StatValue"); }
+            get { return _overTimeLength; }
+            set { OverTimeLength = value; NotifyPropertyChanged("OverTimeLength"); }
         }
-        #endregion "Properties"
+#endregion "Properties"
+    
     }
 }
