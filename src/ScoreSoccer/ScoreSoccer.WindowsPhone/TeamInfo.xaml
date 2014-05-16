@@ -1,0 +1,127 @@
+﻿<Page
+    x:Class="ScoreSoccer.TeamInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ScoreSoccer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:ScoreSoccer.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Margin="0,-1,0,1" >
+
+        <Grid.DataContext>
+            <viewmodels:TeamInfoViewModel></viewmodels:TeamInfoViewModel>
+        </Grid.DataContext>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/SoccerField2.png"/>
+        </Grid.Background>
+
+        <TextBlock 
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Team Info"
+                Width="300"
+                Height="100"
+            FontSize="50"
+                Margin="60,0,0,0"
+                Foreground="Black" />
+
+        <TextBlock 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Team Name"
+                FontSize="30"
+                Width="170"
+                Height="50"
+                Margin="0,10,0,0"
+                Foreground="Black"/>
+
+        <TextBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Height="50"
+                Width="175"/>
+
+        <TextBlock 
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Short Name"
+                FontSize="30"
+                Width="170"
+                Height="50"
+                Margin="0,10,0,0"
+                Foreground="Black"/>
+
+        <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Height="50"
+                Width="175"/>
+
+        <TextBlock 
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Coach"
+                FontSize="30"
+                Width="170"
+                Height="50"
+                Margin="0,10,0,0"
+                Foreground="Black"/>
+
+        <TextBox
+                Grid.Row="3"
+                Grid.Column="1"
+                Height="50"
+                Width="175"/>
+
+        <TextBlock 
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Color"
+                FontSize="30"
+                Width="170"
+                Height="50"
+                Margin="0,10,0,0"
+                Foreground="Black"/>
+        
+        <TextBox
+                Grid.Row="4"
+                Grid.Column="1"
+                Height="50"
+                Width="175"/>
+
+        <Button Content="Save Team"             
+                Command="{Binding SaveTeamButton}"
+                CommandParameter="{Binding}"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Height="100"
+                Width="150"
+                Margin="130,0,0,0"
+                Foreground="White"
+                Background="Gray">
+        </Button>
+
+    </Grid>
+
+</Page>
