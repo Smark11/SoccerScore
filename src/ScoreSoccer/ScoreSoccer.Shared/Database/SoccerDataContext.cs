@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 namespace LocalDatabase
 {
     
-   [Table]
+  // [Table]
 //    public class AddTableNameHere : INotifyPropertyChanged, INotifyPropertyChanging
 //    {
         

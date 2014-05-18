@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Phone.System;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ScoreSoccer
@@ -28,6 +29,7 @@ namespace ScoreSoccer
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+        
         }
 
         /// <summary>
