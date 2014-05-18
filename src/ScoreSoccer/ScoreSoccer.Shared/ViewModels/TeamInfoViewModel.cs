@@ -5,18 +5,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
+using Windows.UI.Xaml.Navigation;
 
 namespace ScoreSoccer.ViewModels
 {
     public class TeamInfoViewModel : INotifyPropertyChanged
     {
-
         public TeamInfoViewModel()
         {
             SaveTeamButton = new SaveTeamButtonClick();
          //   TeamInfo = new Team();
        //     TeamInfo.TeamName = "Farmington";
+
+            TeamInfo = new Team();
+            TeamInfo.TeamName = TeamInfoStaticParams.SelectedTeam.TeamName;
+            TeamInfo.Coach = TeamInfoStaticParams.SelectedTeam.Coach;
+
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,7 +40,7 @@ namespace ScoreSoccer.ViewModels
         public Team TeamInfo
         {
             get { return _teamInfo; }
-            set { TeamInfo = value; NotifyPropertyChanged("TeamInfo"); }
+            set { _teamInfo = value; NotifyPropertyChanged("TeamInfo"); }
         }
 
         #endregion "Properties"

@@ -18,7 +18,7 @@ namespace ScoreSoccer.ViewModels
         {
             AddTeamButton = new AddTeamButtonClick();
             EditTeamButton = new EditTeamButtonClick();
-
+            TeamsList = new ObservableCollection<Team>();
             
 
             TeamsList = new ObservableCollection<Team>();
@@ -72,7 +72,7 @@ namespace ScoreSoccer.ViewModels
         public ObservableCollection<Team> TeamsList
         {
             get { return _teamsList; }
-            set { TeamsList = value; NotifyPropertyChanged("TeamsList"); }
+            set { _teamsList = value; NotifyPropertyChanged("TeamsList"); }
         }
 
         #endregion "Properties"

@@ -57,10 +57,12 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Gray" Margin="0,2,0,0" BorderThickness="0,0,0,2">
+                        <Button Command="{Binding GoToTeamInfoCommand}" Width="250" Height="50">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock TextAlignment="Center" Margin="10,0,0,0" Width="200" Text="{Binding TeamName}"  />
-                            <TextBlock  TextAlignment="Center" Margin="10,0,0,0" Width="200" Text="{Binding Coach}" />
-                        </StackPanel>
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" Width="100" Text="{Binding TeamName}"  />
+                                <TextBlock  TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" Width="100" Text="{Binding Coach}" />
+                            </StackPanel>
+                        </Button>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>

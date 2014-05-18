@@ -22,7 +22,6 @@ namespace ScoreSoccer.Commands
 
         public void Execute(object parameter)
         {
-
             Frame frame = Windows.UI.Xaml.Window.Current.Content as Frame;
 
             frame.Navigate(typeof(Teams));
