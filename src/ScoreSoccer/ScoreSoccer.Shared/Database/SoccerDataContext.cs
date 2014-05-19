@@ -1,17 +1,17 @@
 ﻿//using System;
 //using System.ComponentModel;
-//using System.Linq;
+using System.Linq;
+using System.Linq.Expressions;
 
 
 
 ////using System.Data.Linq;
 ////using System.Data.Linq.Mapping;
 
-//namespace LocalDatabase
-//{
-
+namespace LocalDatabase
+{
     
-//    [Table]
+  // [Table]
 //    public class AddTableNameHere : INotifyPropertyChanged, INotifyPropertyChanging
 //    {
         
@@ -54,4 +54,4 @@
 //        #endregion
 //    }
 
-//}
+}
